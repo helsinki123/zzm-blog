@@ -13,8 +13,7 @@ props 单向数据流
 Set数据结构 类数组
 [...set]可以将类数组转变成数组
 
-更新
-# css相关
+# 更新
 [css笔记](https://github.com/helsinki123/zzm-blog/blob/main/docs/css.md)
 
 [css实现九宫格](https://github.com/helsinki123/zzm-blog/blob/main/docs/%E4%B9%9D%E5%AE%AB%E6%A0%BC.html)
