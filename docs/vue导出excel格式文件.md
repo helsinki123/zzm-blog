@@ -5,7 +5,7 @@
  npm  install  -D script-loader
 ```
 将此文件复制到项目
-[Export2Excel.js]()
+[Export2Excel.js](https://github.com/helsinki123/zzm-blog/blob/main/docs/Export2Excel.js)
 ```
 html
 <button @click="handleExportExcel">导出</button>
