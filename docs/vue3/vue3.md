@@ -302,4 +302,13 @@ export default {
 [Vue3 ref](https://www.jianshu.com/p/a61c715c5cad)
 # 组合式API图解
 [掘金链接](https://juejin.cn/post/6890545920883032071)
+# ref和reactive的区别
+
+- ref 用来定义 基本类型
+- ref 底层通过 Object.defineProperty()的 get 于 set 来实现响应式 (数据劫持)
+- ref定义的数据：操作数据需要.value，读取数据时模板中直接读取不需要.value
+1. reactive用来定义：对象或数组类型数据。
+2. reactive通过使用Proxy来实现响应式（数据劫持）, 并通过Reflect操作源代码内部的数据。
+3. reactive定义的数据：操作数据与读取数据：均不需要.value。
+- ref可以定义对象或数组的，它只是内部自动调用了reactive来转换。
 
