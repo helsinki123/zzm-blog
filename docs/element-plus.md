@@ -1,3 +1,13 @@
+# :width
+```
+ <el-aside
+      :width="isCollapse ? '60px' : '200px'"
+      :class="isCollapse ? 'hide-aside' : 'show-side'"
+      v-show="!contentFullScreen"
+    >
+    :width妙啊
+```
+
 # 全局引入icon
 ## JS
 ```
