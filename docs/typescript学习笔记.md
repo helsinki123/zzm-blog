@@ -4,5 +4,5 @@ let someValue: any = "this is a string";
 let strLength: number = (<string>someValue).length;
 另一个为as语法：
 let someValue: any = "this is a string";
-let st
+let strLength: number = (someValue as string).length;
 ```
