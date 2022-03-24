@@ -1,14 +1,22 @@
 # 在vite.config.js里面添加跨域配置
-```
-server: {
+1. ```server: {
       open: true,//启动项目自动弹出浏览器
       port: 3000,//启动端口
       proxy: {
         '/api': 'https://api.it120.cc/'//代理网址
       }
     }
+    使用get("/api/shop/goods/category/all") 便可跨域
 ```
-- 使用get("/api/shop/goods/category/all") 便可跨域
+2. 
+https://animechan.vercel.app/api/random
+不会替换，只是匹配
+
+'/api': 'https://animechan.vercel.app' 
+ .get("/api/random")
+
+ http://localhost:3000/api/random
+
 
 # vue3全局挂载
 main.js
