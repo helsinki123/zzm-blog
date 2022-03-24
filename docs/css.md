@@ -1,3 +1,5 @@
+# 报错 node-sass 不支持64位
+- 安装node14版本  16版本太高了 node-sass不支持
 # normalize.css npm包 可用于css reset
 
 margin：auto为什么只能实现水平居中，不能实现垂直居中?
