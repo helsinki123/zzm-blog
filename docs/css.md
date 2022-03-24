@@ -1,3 +1,5 @@
+# normalize.css npm包 可用于css reset
+
 margin：auto为什么只能实现水平居中，不能实现垂直居中?
 因为默认的宽度规则是“适应于父级”规则（在水平方向上自动扩充）。即
 
