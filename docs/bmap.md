@@ -1,3 +1,23 @@
+
+# bmap使用echarts的option格式
+```
+var option = {
+    tooltip : {
+        trigger: 'item'
+    },
+    bmap: {
+        roam: true,//必填
+        silent:true，
+        zoom:数字,
+        center:[展示中心位置],
+        mapStyle:{
+      
+        }
+        },
+    series: 参照echarts格式
+    
+}
+```
 ```
 1. 安装echarts(使用3.x, 4.x版本)
 npm install echarts@3.0.0 --save
