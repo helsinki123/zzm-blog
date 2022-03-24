@@ -1,3 +1,5 @@
+# bmap打包后不能显示 在div里面手动填入<script src:bmap>的路径
+# 闲时要有吃紧的心思，忙里要有偷闲的乐趣
 # vue3 使用百度map
 ```
 index.html
