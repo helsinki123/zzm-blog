@@ -39,6 +39,7 @@ var option = {
     
 }
 ```
+# bmap安装指南
 ```
 1. 安装echarts(使用3.x, 4.x版本)
 npm install echarts@3.0.0 --save
