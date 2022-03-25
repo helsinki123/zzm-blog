@@ -1,3 +1,65 @@
+# 完整函数类型
+[参考](https://ts.xcatliu.com/basics/type-of-function.html)
+```
+函数的类型
+函数是 JavaScript 中的一等公民
+
+函数声明§
+在 JavaScript 中，有两种常见的定义函数的方式——函数声明（Function Declaration）和函数表达式（Function Expression）：
+
+// 函数声明（Function Declaration）
+function sum(x, y) {
+    return x + y;
+}
+
+// 函数表达式（Function Expression）
+let mySum = function (x, y) {
+    return x + y;
+};
+一个函数有输入和输出，要在 TypeScript 中对其进行约束，需要把输入和输出都考虑到，其中函数声明的类型定义较简单：
+
+function sum(x: number, y: number): number {
+    return x + y;
+}
+注意，输入多余的（或者少于要求的）参数，是不被允许的：
+
+function sum(x: number, y: number): number {
+    return x + y;
+}
+sum(1, 2, 3);
+
+// index.ts(4,1): error TS2346: Supplied parameters do not match any signature of call target.
+function sum(x: number, y: number): number {
+    return x + y;
+}
+sum(1);
+
+// index.ts(4,1): error TS2346: Supplied parameters do not match any signature of call target.
+函数表达式§
+如果要我们现在写一个对函数表达式（Function Expression）的定义，可能会写成这样：
+
+let mySum = function (x: number, y: number): number {
+    return x + y;
+};
+这是可以通过编译的，不过事实上，上面的代码只对等号右侧的匿名函数进行了类型定义，而等号左边的 mySum，是通过赋值操作进行类型推论而推断出来的。如果需要我们手动给 mySum 添加类型，则应该是这样：
+
+let mySum: (x: number, y: number) => number = function (x: number, y: number): number {
+    return x + y;
+};
+注意不要混淆了 TypeScript 中的 => 和 ES6 中的 =>。
+
+在 TypeScript 的类型定义中，=> 用来表示函数的定义，左边是输入类型，需要用括号括起来，右边是输出类型。
+```
+[参考](https://juejin.cn/post/6998690233067765796)
+```
+let add: (x: number, y: number) => number;//还可以使用 interface type定义add
+add = (arg1: number, arg2: number): number => arg1 + arg2;
+add = (arg1: string, arg2: string): string => arg1 + arg2; // error
+这里定义了一个变量 add，给它指定了函数类型，也就是(x: number, y: number) => number，这个函数类型包含参数和返回值的类型。然后给 add 赋了一个实际的函数，这个函数参数类型和返回类型都和函数类型中定义的一致，所以可以赋值。后面又给它赋了一个新函数，而这个函数的参数类型和返回值类型都是 string 类型，这时就会报如下错误：
+不能将类型"(arg1: string, arg2: string) => string"分配给类型"(x: number, y: number) => number"。
+参数"arg1"和"x" 的类型不兼容。
+不能将类型"number"分配给类型"string"。
+```
 # namespace和module
 [参考](https://juejin.cn/post/6844903921031479309)
 - namespace在官方也已经不是推荐的最佳实践了, 官方已经把模块替换为es6模块的格式了, 
