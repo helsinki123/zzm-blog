@@ -1,3 +1,8 @@
+# namespace和module
+[参考](https://juejin.cn/post/6844903921031479309)
+- namespace在官方也已经不是推荐的最佳实践了, 官方已经把模块替换为es6模块的格式了, 
+- 只是namespace这个概念还在保留, 现在也就是declare全局变量的时候可能会用到namespace的关键字
+- 本文的内容了解即可, 实际应用比较少.
 # 元组类型 
 ```
 let tup1:[number, string, boolean] = [1, 'a', true];
