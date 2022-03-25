@@ -1,3 +1,13 @@
+# super
+```
+super 实际上用在两种语法中:
+
+1. constructor 内的 super(): 执行父类的构造函数。必须至少执行一次。
+
+2. 一般方法内的 super.method(): 执行父类的 (未必同名的) 方法。不是必需。
+
+super.method(...) 等价于 父类的构造函数.prototype.method.call(this, ...)。
+```
 # ts和java语法挺像的
 [参考](https://juejin.cn/post/6870843175146258445)
 # 泛型
