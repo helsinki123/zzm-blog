@@ -1,3 +1,8 @@
+# css margin 核心规律：top,left负值 本身往top，left方向走；right，bottom负值 本身不动 后面的元素往本身靠拢
+## 应用：
+- 3d字体
+- 拉伸（margin:0 -20px）
+- 布局（float+margin单列，float+margin圣杯布局）
 # 报错 node-sass 不支持64位
 - 安装node14版本  16版本太高了 node-sass不支持
 # normalize.css npm包 可用于css reset
