@@ -1,3 +1,10 @@
+# 泛型
+```
+基本写法
+function handleClick<T>(params:T):T{}
+泛型继承(为泛型添加限制范围)
+function handleClick<T extends {length:number}>(params:T):T{}
+```
 # 断言assert 的作用
 1、断言assert 是仅在Debug 版本起作用的宏，它用于检查“不应该”发生的情况；
 
