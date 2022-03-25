@@ -1,3 +1,21 @@
+# 元组类型 
+```
+let tup1:[number, string, boolean] = [1, 'a', true];
+console.log(tup1);  
+number, string, boolean必须一一对应
+```
+# 联合类型 |
+```
+var val:string|number 
+val = 12 
+console.log("数字为 "+ val) 
+val = "Runoob" 
+console.log("字符串为 " + val)
+使用非string，number 会报错
+```
+# type 和 interface
+- 一般来说，如果不清楚什么时候用interface/type，能用 interface 实现，就用 interface , 如果不能就用 type 
+[参考](https://juejin.cn/post/6844903749501059085)
 # super
 ```
 super 实际上用在两种语法中:
