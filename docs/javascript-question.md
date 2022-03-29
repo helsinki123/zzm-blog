@@ -1,3 +1,20 @@
+```
+const person = {
+  name: 'Lydia',
+  age: 21,
+};
+
+const changeAge = (x = { ...person }) => (x.age += 1);
+const changeAgeAndName = (x = { ...person }) => {
+  x.age += 1;
+  x.name = 'Sarah';
+};
+
+changeAge(person);//传值则指向相同
+changeAgeAndName();
+
+console.log(person);//{name: "Lydia", age: 22}
+```
 - ...展开运算符是浅拷贝
 - 使用 defineProperty 方法，我们可以向对象添加新属性，或修改现有属性。 
 - 当我们使用 defineProperty 方法向对象添加属性时，默认情况下它们是不可枚举的。所以使用Object.keys无法遍历出刚创建的key
