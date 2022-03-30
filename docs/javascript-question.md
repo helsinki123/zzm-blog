@@ -1,4 +1,43 @@
 ```
+function* Gen1() {
+  yield 2;
+  yield 3;
+}
+function* Gen2() {
+  yield 1;
+  yield* Gen1();
+  yield 4;
+}
+var g2 = Gen2();
+console.log(g2.next().value); // 1
+console.log(g2.next().value); // 2
+console.log(g2.next().value); // 3
+console.log(g2.next().value); // 4
+- 从上面几个例子可以看出，yield 与 yield* 的区别在于：yield 只是返回右值，
+- 而 yield* 则将函数委托（delegate）到另一个生成器（ Generator）或可迭代的对象（如字符串、数组和类数组 arguments，以及 ES6 中的 Map、Set 等）。
+```
+- 要访问const let定义的变量才会形成暂时性死区
+```
+const randomValue = 21;
+
+function getInfo() {
+	console.log(typeof randomValue);//number
+    const a = "Lydia Hallie";
+}
+
+getInfo();
+***
+const randomValue = 21;
+
+function getInfo() {
+	console.log(typeof randomValue);//报错 refference error (应为有const randomValue，所以不会出函数外面找randomValue)
+    const randomValue = "Lydia Hallie";
+}
+
+getInfo();
+```
+- NaN是number类型
+```
 const person = {
   name: 'Lydia',
   age: 21,
