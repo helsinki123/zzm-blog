@@ -1,3 +1,5 @@
+- slice方法不会修改原始数组，但是会返回从数组切片下来的值
+- splice方法会修改原始数组
 ```
 function* Gen1() {
   yield 2;
