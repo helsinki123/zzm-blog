@@ -56,3 +56,24 @@ npx
 哪些新的 ES6+的特性保留原样，哪些特性要转译成 es5，
 webpack，babel 本身是通过这个工具提供的浏览器支持范围来确定的
 ```
+# polyfill
+- 浏览器不支持某些功能，polyfill使其能够用自身支持的方式实现该功能
+```
+比如：
+提示：polyfill 指的是“用于实现浏览器不支持原生功能的代码”，比如，现代浏览器应该支持 fetch 函数，对于不支持的浏览器，
+网页中引入对应 fetch 的 polyfill 后，这个 polyfill 就给全局的window对象上增加一个fetch函数，
+让这个网页中的 JavaScript 可以直接使用 fetch 函数了，就好像浏览器本来就支持 fetch 一样。
+```
+# Babel 中的预设就是一组babel插件的集合
+```
+如果手动修改package.json里面的模块的版本,npm i则会下载package-lock.json里面的版本
+加入npm指定版本，则node_modules和package-lock.json都会是指定的那个版本
+```
+```
+使用npm i安装中会根据package-lock.json来安装
+当我们在一个项目中npm install时候，会自动生成一个package-lock.json文件，
+和package.json在同一级目录下。package-lock.json记录了项目的一些信息和所依赖的模块。
+这样在每次安装都会出现相同的结果. 不管你在什么机器上面或什么时候安装。
+
+当我们下次再npm install时候，npm发现如果项目中有package-lock.json文件，会根据package-lock.json里的内容来处理和安装依赖而不再根据package.json。注意，使用cnpm install时候，并不会生成package-lock.json文件，也不会根据package-lock.json来安装依赖包，还是会使用package.json来安装。
+```
