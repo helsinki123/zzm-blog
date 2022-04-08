@@ -13,3 +13,5 @@ prod.env.js文件是生产环境的变量，npm run build命令；在build文件
 
 原来老版本的vue项目中有build文件夹。@vue-cli4.0或者3.0没有build文件夹
 ```
+# vue项目不能运行node-sass，注意node版本与node-sass版本
+# 安装最新的脚手架需要node版本12.0.0
