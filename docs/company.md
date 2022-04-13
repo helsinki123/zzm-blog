@@ -1,3 +1,23 @@
+# 4/13星期三
+```
+vue.config.js配置格式
+'/return_mh_server':{
+		  target:'https://ilh.szlhq.gov.cn'
+	  }
+.vue文件使用格式
+ uni.request({
+	      url: '/return_mh_server/nlztRequest/getAppsmsessions', //仅为示例，并非真实接口地址。
+		  method:'get',
+	      data: {
+	        usertoken: this.token
+	      },
+	      success: (res) => {
+          this.ipone = res.data.sjh
+	      }
+	  });
+浏览器显示的URL路径：https://localhost:8080/return_mh_server/nlztRequest/getAppsmsessions?usertoken=
+完整的URL路径：https://ilh.szlhq.gov.cn/return_mh_server/nlztRequest/getAppsmsessions?usertoken=
+```
 # 4/12星期二
 ## mixin使用事项
 - 对于creaetd，mounted 等生命周期函数。mixin中的代码先执行，单文件中的后执行
