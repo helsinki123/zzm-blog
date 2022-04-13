@@ -1,4 +1,11 @@
 # 4/13星期三
+## git reset --hard 15455331b72702014a8eb3fcff91443ac2837280
+- 版本回退到commit的版本
+```
+git pull在有冲突的时候是不会拉取的
+git push也可以检测冲突
+冲突不解决也可以提交，会显示冲突字符串
+```
 ## uniapp不需要重置css？
 ```
 vue.config.js配置格式
