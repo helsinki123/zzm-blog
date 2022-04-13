@@ -1,4 +1,12 @@
 # 4/13星期三
+## dev和 start是两个等价的命令，执行其中之一都可以将项目以开发模式启动
+## build目录下是一些用于项目编译打包的node.js脚本和webpack配置文件。一般情况下不需要修改这些文件。
+## mpvue可以将小程序打包到多端
+```
+npm run dev:my   // 支付宝
+npm run dev:swan  // 百度
+npm run dev:tt   // 今日头条
+```
 ## 小程序实现登录的流程，是先通过wx.login获取code，然后再用code请求自己服务器，自己服务器拿着code去微信服务器获取openid，然后业务自定义实现登录
 ## git reset --hard 15455331b72702014a8eb3fcff91443ac2837280
 - 版本回退到commit的版本
