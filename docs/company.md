@@ -1,4 +1,5 @@
 # 4/13星期三
+## uniapp不需要重置css？
 ```
 vue.config.js配置格式
 '/return_mh_server':{
