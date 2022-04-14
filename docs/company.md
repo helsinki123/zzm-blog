@@ -1,9 +1,23 @@
 # 4/14星期四
+- pages新增了三个个文件夹wenshenchangshidetail searchtemp searchdetailtemp  
+- anquan文件夹新增了三个文件weishenchangshi.vue mockData.js weishenmockData.js
+```
+searchtemp文件夹搜索列表页 
+searchdetailtemp文件夹搜索列表详情页
+
+weishenchangshi.vue卫生常识列表页
+weishenmockData.js卫生常识数据
+
+mockData.js 法规政策数据
+```
+## mpvue遇到bug导致输入框无法选中，试试重启小程序项目
 ## mpvue main路径指代index.vue和与文件夹同名的vue文件
 ## 一码通逻辑
 ```
 anquan文件夹下的index动态展示组件法规政策，电梯常识，安全视频组件注释了（暂时无法使用）
 菜单里的每个列表也拆分为了组件，法规政策详情也拆成了一个组件
+电梯常识详情->对于anquachangshi文件夹的index
+anquanshiping和anquan两个组件暂时没用到
 ```
 ## https://www.sz96333.com 不在以下 request 合法域名列表中（为什么小程序也可以正常运行）
 # 4/13星期三
