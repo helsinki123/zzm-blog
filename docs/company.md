@@ -1,4 +1,19 @@
 # 4/15星期五
+## 生成二维码
+```
+npm install weapp-qrcode --save
+
+import drawQrcode from "weapp-qrcode";
+
+<canvas class="myQrcode" canvas-id="myQrcode"></canvas>
+
+drawQrcode({
+      width: 150,
+      height: 150,
+      canvasId: "myQrcode",
+      text:'zzm'
+    });
+```
 ## app.json配置usingComponents全局自定义组件配置
 ## weui微信小程序自带的组件库，在app.json直接配置就可以使用
 ## sourcemap
