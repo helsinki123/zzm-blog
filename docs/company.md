@@ -1,5 +1,37 @@
+# 4/15星期五
+❓mpvue的onShow和mounted生命周期有点混乱
+- onShow() 事件不接受参数，因此无法获取页面 url 传递过来的参数，只有 onLoad() 事件可以
+```
+列表的详情可以使用统一的page->zhengchexingwen,只需要在onLoad生命周期函数里面判断一下跳转传参再设置wx.setNavigationBarTitle的title
+```
 # 4/14星期四
-- pages新增了三个个文件夹wenshenchangshidetail searchtemp searchdetailtemp  
+# 震惊mpvue项目pages下的目录-> ../指向爷爷级别
+pages新增了三个个文件夹wenshenchangshidetail searchtemp searchdetailtemp  
+## 微信小程序文件太大上传失败
+- 使用分包，格式如下
+- 注意要把pages配置里面的pages/anquan/main路径删除，不然会报bug“pages *** 不应该在分包 subPackages[*] 中”
+```
+ "subPackages": [
+    {
+      "root": "pages/toVideo",
+      "pages": [
+        "room"
+      ]
+    },
+    {
+      "root": "pages/anquan",
+      "pages": [
+        "main"
+      ]
+    },
+    {
+      "root": "pages/searchtemp",
+      "pages": [
+        "main"
+      ]
+    }
+  ]
+```
 - anquan文件夹新增了三个文件weishenchangshi.vue mockData.js weishenmockData.js
 ```
 searchtemp文件夹搜索列表页 
