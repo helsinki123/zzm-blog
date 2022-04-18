@@ -1,4 +1,9 @@
 # 4/18星期一
+## 在线查看使用了哪些iconfont
+
+[在线链接](http://blog.luckly-mjw.cn/tool-show/iconfont-preview/index.html)
+- 例子：url('//at.alicdn.com/t/font_880468_eglfuc5j6ec.ttf?t=1577442795375') format('truetype')
+- 线上预览链接使用这个格式//at.alicdn.com/t/font_880468_eglfuc5j6ec.ttf?t=1577442795375
 ## iview-weapp使用
 - 比如button，将这个组件拷贝到项目
 [Button](https://github.com/TalkingData/iview-weapp/blob/master/src/button/index.wxml)
