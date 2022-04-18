@@ -1,3 +1,17 @@
+# 4/18星期一
+## iview-weapp使用
+- 比如button，将这个组件拷贝到项目
+[Button](https://github.com/TalkingData/iview-weapp/blob/master/src/button/index.wxml)
+```
+app.json配置
+"usingComponents": {
+    "i-button": "static/component/button/index"
+}，
+"useExtendedLib": {
+    "weui": true
+}
+便可全局使用
+```
 # 4/15星期五
 - 当实在是解决不了bug的时候，试试将原来的代码块复制过来，原因可能是不小心误删了某些东西
 ## 生成二维码
