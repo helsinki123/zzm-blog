@@ -1,4 +1,5 @@
 # 4/18星期一
+## 当微信小程序只显示pages/xxx/.wxml路径，不展示页面的时候，重新npm run start:wx一下
 ## 在线查看使用了哪些iconfont
 
 [在线链接](http://blog.luckly-mjw.cn/tool-show/iconfont-preview/index.html)
