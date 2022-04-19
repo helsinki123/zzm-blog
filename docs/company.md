@@ -1,4 +1,5 @@
 # 4/19星期二
+## 小程序调用validate方法会调用onShow方法
 ## VM1999 WAService.js:2 TypeError: Cannot read property 'call' of undefined 这个bug经常出现
 ## unexpected character `` 这个报错莫名其妙，vscode格式化代码格式会报
 # 4/18星期一
