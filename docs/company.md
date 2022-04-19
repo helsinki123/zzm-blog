@@ -1,3 +1,5 @@
+# 4/19星期二
+## unexpected character `` 这个报错莫名其妙，vscode格式化代码格式会报
 # 4/18星期一
 ## 当微信小程序只显示pages/xxx/.wxml路径，不展示页面的时候，重新npm run start:wx一下
 ## 在线查看使用了哪些iconfont
