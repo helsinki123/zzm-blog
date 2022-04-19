@@ -1,4 +1,5 @@
 # 4/19星期二
+## VM1999 WAService.js:2 TypeError: Cannot read property 'call' of undefined 这个bug经常出现
 ## unexpected character `` 这个报错莫名其妙，vscode格式化代码格式会报
 # 4/18星期一
 ## 当微信小程序只显示pages/xxx/.wxml路径，不展示页面的时候，重新npm run start:wx一下
