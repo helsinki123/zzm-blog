@@ -1,4 +1,5 @@
 # 4/20星期三
+代理target是匹配拼接
 - vue.config.js和config下面的index.js都可配置代理
 ## vue-cli-service serve会启用vue.config.js 
 ## webpack-dev-server会启用config下面的index.js
