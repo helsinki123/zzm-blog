@@ -1,4 +1,10 @@
 # 4/20星期三
+```
+1.删除baseURL，才能走代理
+2.注意配置dev的host要是localhost
+3.proxyTable那个代理的正则匹配<   一定要加/   >这个很重要
+
+```
 - 代理服务器会自动识别//和/,将//替换为/
 ## 关于changeOrigin的作用，设置为true就对了[参考](https://blog.csdn.net/qq_39291919/article/details/108807111)
 代理target是匹配拼接
