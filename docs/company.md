@@ -1,4 +1,23 @@
 # 4/20星期三
+## 4个项目总结
+
+1，自来水厂后台：大屏展示加后台
+使用vue2语法
+
+2，观澜H5：uniapp
+cus-button是自定义组件
+在main全局注册
+uni-icon是uni-ui组件
+[uni-ui使用参考](https://www.jianshu.com/p/d5ac4db0b16c)
+
+3，电梯一码通：mpvue
+static里面的compnents的i-button是iview-weapp组件，直接在github下载代码复制到项目，在app.json里面的usingComponents属性注册使用 [官网](https://weapp.iviewui.com/components/panel)
+usingComponents还可以直接注册微信小程序官方组件库"mp-icon": "weui-miniprogram/icon/icon"便可直接使用
+mpvue可以使用vue的语法，所以自定义组件和vue的使用方式一样
+
+4，智慧卫监
+使用vue2语法
+## 跨域BUG
 ```
 1.删除baseURL，才能走代理
 2.注意配置dev的host要是localhost
