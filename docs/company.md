@@ -1,6 +1,16 @@
 # 4/20星期三
+- vue.config.js和config下面的index.js都可配置代理
+## vue-cli-service serve会启用vue.config.js 
+## webpack-dev-server会启用config下面的index.js
 ## vue create 和 vue init 的区别[参考](https://segmentfault.com/a/1190000040099773)
+```
+vue create 和 vue init 有什么区别
+01、vue create
+vue create 是vue-cli3.x的初始化方式，目前模板是固定的，模板选项可自由配置，创建出来的是vue-cli3的项目，与cue-cli2项目结构不同，配置方法不同，具体配置方法参考官方文档。
 
+02、vue init
+vue init 是vue-cli2.x的初始化方式，可以使用github上面的一些模板来初始化项目，webpack是官方推荐的标准模板名。vue-cli2.x项目向3.x迁移只需要把static目录复制到public目录下，老项目的src目录覆盖3.x的src目录(如果修改了配置，可以查看文档，用cli3的方法进行配置)
+```
 # 4/19星期二
 ## 小程序调用validate方法会调用onShow方法
 ## VM1999 WAService.js:2 TypeError: Cannot read property 'call' of undefined 这个bug经常出现
