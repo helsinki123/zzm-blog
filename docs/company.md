@@ -1,3 +1,6 @@
+# 4/20星期三
+## vue create 和 vue init 的区别[参考](https://segmentfault.com/a/1190000040099773)
+
 # 4/19星期二
 ## 小程序调用validate方法会调用onShow方法
 ## VM1999 WAService.js:2 TypeError: Cannot read property 'call' of undefined 这个bug经常出现
