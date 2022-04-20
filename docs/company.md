@@ -1,4 +1,8 @@
 # 4/20星期三
+## 项目启动与vue.config.js
+- "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js"使用webpack创建项目，启动config里面的index.js配置文件
+- "serve": "vue-cli-service serve"这是使用vue-cli创建的项目启动vue.config.js文件
+- 都是在上面两个文件里面配置跨域
 ## 4个项目总结
 
 1，自来水厂后台：大屏展示加后台
