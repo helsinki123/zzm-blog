@@ -1,4 +1,5 @@
 # 4/20星期三
+- 代理服务器会自动识别//和/,将//替换为/
 ## 关于changeOrigin的作用，设置为true就对了[参考](https://blog.csdn.net/qq_39291919/article/details/108807111)
 代理target是匹配拼接
 - vue.config.js和config下面的index.js都可配置代理
