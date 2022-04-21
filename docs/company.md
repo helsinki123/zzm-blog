@@ -1,4 +1,11 @@
 # 4/21星期四
+## 安装node-sass要注意版本，不建议使用默认安装
+```
+sass-loader 4.1.1，node-sass 4.3.0
+sass-loader 7.0.3，node-sass 4.7.2
+sass-loader 7.3.1，node-sass 4.7.2
+sass-loader 7.3.1，node-sass 4.14.1
+```
 ```
 智慧卫监平台：提供医疗废物、放射卫生在线监督功能
 
