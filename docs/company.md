@@ -6,8 +6,10 @@
  "useExtendedLib": {
       "weui": true
     }
-    全局注册
-    "usingComponents":{"mp-icon": "weui-miniprogram/icon/icon",}
+全局注册
+  "usingComponents":{"mp-icon": "weui-miniprogram/icon/icon",}
+example：
+<mp-icon icon="close"></mp-icon>
     
 ```
 - 微信小程序构建npm配置
