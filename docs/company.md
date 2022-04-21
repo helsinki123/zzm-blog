@@ -1,4 +1,25 @@
 # 4/21星期四
+## 微信小程序使用weui
+- 若是一直报错，就重启一下项目
+```
+在app.json加入
+ "useExtendedLib": {
+      "weui": true
+    }
+    全局注册
+    "usingComponents":{"mp-icon": "weui-miniprogram/icon/icon",}
+    
+```
+- 微信小程序构建npm配置
+```
+ "packNpmManually": true,
+    "packNpmRelationList": [
+      {
+        "packageJsonPath": "./package.json",
+        "miniprogramNpmDistDir": "./"
+      }
+    ]
+```
 ## 安装node-sass要注意版本，不建议使用默认安装
 ```
 sass-loader 4.1.1，node-sass 4.3.0
