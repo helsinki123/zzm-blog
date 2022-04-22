@@ -1,4 +1,11 @@
 # 4/22星期五
+## 拿到一个项目若报sass安装错误，将原来的node-sass和sass-loader uninstall 再安装相应的node-sass和sass-loader
+```
+sass-loader 4.1.1，node-sass 4.3.0
+sass-loader 7.0.3，node-sass 4.7.2
+sass-loader 7.3.1，node-sass 4.7.2
+sass-loader 7.3.1，node-sass 4.14.1
+```
 ## 查看vue脚手架版本 vue -V 报错不是有效命令
 - 若装了nvm 则配置系统环境 path 为vue.cmd的路径，比如：G:\nvm\nvm\v10.15.2
 ## 使用vue脚手架创建uniapp项目注意事项
