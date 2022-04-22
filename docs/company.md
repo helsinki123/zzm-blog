@@ -1,3 +1,25 @@
+# 4/22星期五
+- 使用hbuildx创建uniapp项目和vue-cli创建项目的区别不大，公司的老项目是使用vue脚手架创建的
+## 注意 vue脚手架创建的uniapp项目可以发布H5、各种小程序，所以使用脚手架创建即可，最多是没有uniapp专属的api提示功能（问题不大）
+```
+3.1编译器的区别
+cli创建的项目，编译器安装在项目下。并且不会跟随HBuilderX升级。如需升级编译器，执行 npm update，或者手动修改package.json 中的 uni 相关依赖版本后执行 npm install。更新后可能会有新增的依赖并不会自动安装，手动安装缺少的依赖即可。
+HBuilderX可视化界面创建的项目，编译器在HBuilderX的安装目录下的plugin目录，随着HBuilderX的升级会自动升级编译器。
+已经使用cli创建的项目，如果想继续在HBuilderX里使用，可以把工程拖到HBuilderX中。注意如果是把整个项目拖入HBuilderX，则编译时走的是项目下的编译器。如果是把src目录拖入到HBuilderX中，则走的是HBuilderX安装目录下plugin目录下的编译器。
+cli版如果想安装less、scss、ts等编译器，需自己手动npm安装。在HBuilderX的插件管理界面安装无效，那个只作用于HBuilderX创建的项目
+npm install sass-loader@10  node-sass@4 --save-dev
+1
+  sass-loader@11 以上需要是 webpack5，这里示例的uni-app项目是通过vue-cli4生成的(webpack4)。所以这里指定10版本
+
+3.2开发工具的区别
+cli创建的项目，内置了d.ts，同其他常规npm库一样，可在vscode、webstorm等支持d.ts的开发工具里正常开发并有语法提示。
+使用HBuilderX创建的项目不带d.ts，HBuilderX内置了uni-app语法提示库。如需把HBuilderX创建的项目在其他编辑器打开并且补充d.ts，可以在项目下先执行
+npm init，然后npm i @types/uni-app -D，来补充d.ts。但vscode等其他开发工具，在vue或uni-app领域，开发效率比不过HBuilderX。详见：https://ask.dcloud.net.cn/article/35451
+
+！！！发布App时，仍然需要使用HBuilderX。其他开发工具无法发布App，但可以发布H5、各种小程序。如需开发App，可以先在HBuilderX里运行起来，然后在其他编辑器里修改保存代码，代码修改后会自动同步到手机基座。
+如果使用cli创建项目，那下载HBuilderX时只需下载10M的标准版即可。因为编译器已经安装到项目下了。
+
+```
 # 4/21星期四
 ## 微信小程序使用weui
 - 若是一直报错，就重启一下项目
