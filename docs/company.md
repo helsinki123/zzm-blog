@@ -1,5 +1,5 @@
 # 4/22星期五
-## 拿到一个项目若报sass安装错误，将原来的node-sass和sass-loader uninstall 再安装相应的node-sass和sass-loader
+## 拿到一个项目若报sass安装错误，将原来的node-sass和sass-loader uninstall 再安装相应的node-sass和sass-loader,还要注意安装node-sass有node版本的要求
 ```
 sass-loader 4.1.1，node-sass 4.3.0
 sass-loader 7.0.3，node-sass 4.7.2
