@@ -1,4 +1,12 @@
 # 4/22星期五
+## 查看vue脚手架版本 vue -V 报错不是有效命令
+- 若装了nvm 则配置系统环境 path 为vue.cmd的路径，比如：G:\nvm\nvm\v10.15.2
+## 使用vue脚手架创建uniapp项目注意事项
+```
+1.node最好使用10  v10.15.2有效
+2.vue@cli使用4 @vue/cli 4.5.10有效
+3.vue create -p dcloudio/uni-preset-vue my-project 便可创建
+```
 - 使用hbuildx创建uniapp项目和vue-cli创建项目的区别不大，公司的老项目是使用vue脚手架创建的
 ## 注意 vue脚手架创建的uniapp项目可以发布H5、各种小程序，所以使用脚手架创建即可，最多是没有uniapp专属的api提示功能（问题不大）
 ```
