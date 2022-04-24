@@ -1,3 +1,20 @@
+# 4/24星期日
+## vue使用three.js
+```
+风机3D数据可视化，使用了three.js：
+GLTFLoader加载3D模型，
+three-outlinepass->Three.js 后期处理-物体边界线条高亮处理-OutlinePass
+@tweenjs/tween.js 动画引擎，让动画顺滑
+Three.js依赖一些要素，第一是scene，第二是render，第三是carmea
+轨道控制器（OrbitControls）建立控制 讓鏡頭旋轉
+平行光（DirectionalLight）
+CSS 2D渲染器（CSS2DRenderer）如果你希望将三维物体和基于HTML的标签相结合，
+则这一渲染器将十分有用。在这里，各个DOM元素也被包含到一个CSS2DObject实例中，并被添加到场景图中。
+stats.js 介绍
+（1）stats.js 是一个 Three.js 开发的辅助库，这个库同样也是 Three.js 作者开发的。
+（2）stats.js 主要用于检测动画运行时的帧数。
+
+```
 # 4/22星期五
 ## browse the repository at this point of history 在这个历史时刻浏览存储库 不会覆盖现在的记录，只是浏览过去某个时刻的状态
 ## 拿到一个项目若报sass安装错误，将原来的node-sass和sass-loader uninstall 再安装相应的node-sass和sass-loader,还要注意安装node-sass有node版本的要求
