@@ -1,3 +1,5 @@
+##  报错Unexpected token < in JSON at position 0 
+- GLTFLoader加载失败，注意根路径是public
 # 4/24星期日
 ## vue使用three.js
 ```
