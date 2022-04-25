@@ -1,4 +1,16 @@
 # 4/25星期一
+## three.js加载的模型全是黑色
+- 如果调整环境光后还是黑色或其他的纯色，那么将模型的材质里的emssive设置为material.color，如果材质里有纹理，再把emissiveMap设置为material.map
+```
+scene.add(new THREE.AmbientLight(0x666666));//环境光
+
+gltf.scene.traverse( function ( child ) {
+  if ( child.isMesh ) {
+    child.material.emissive =  child.material.color;
+    child.material.emissiveMap = child.material.map ;
+  }
+});
+```
 - thingjs使用在线开发点击分享可以生成链接，选择公开项目，可以通过iframe内嵌到其他web页面
 - thingjs提供模型，也可以自己建一些简单的模型,使用marker为模型添加覆盖物
 ##  three.js导入外部模型报错Unexpected token < in JSON at position 0 
