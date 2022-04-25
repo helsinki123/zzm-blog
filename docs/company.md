@@ -1,4 +1,7 @@
-##  报错Unexpected token < in JSON at position 0 
+# 4/25星期一
+- thingjs使用在线开发点击分享可以生成链接，选择公开项目，可以通过iframe内嵌到其他web页面
+- thingjs提供模型，也可以自己建一些简单的模型,使用marker为模型添加覆盖物
+##  three.js导入外部模型报错Unexpected token < in JSON at position 0 
 - GLTFLoader加载失败，注意根路径是public
 # 4/24星期日
 ## vue使用three.js
