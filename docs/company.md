@@ -1,4 +1,16 @@
 # 4/26星期二
+```
+	renderer.setClearColor( 0x002451 );//设置渲染器的bgcolor
+	renderer.setPixelRatio( window.devicePixelRatio );
+	renderer.setSize( window.innerWidth, window.innerHeight );//设置渲染器的宽高
+```
+- 网格辅助线
+```
+			var helper = new THREE.GridHelper( 80, 10 );
+			helper.rotation.x = Math.PI / 2;
+			group.add( helper );
+```
+- Ambient Light是模拟漫反射的一种光源
 - stats.js 主要用于检测动画运行时的帧数
 ## threejs绘制图像的过程:
 1. scene = new THREE.Scene();
