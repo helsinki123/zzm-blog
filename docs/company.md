@@ -1,4 +1,20 @@
 # 4/26星期二
+- 将圆的一周表示为 2*PI 的度量单位，称为弧度，弧度代表半径为 1、圆心角为 θ 的圆弧
+```
+requestAnimationFrame(draw);
+		function draw() {
+                alpha += 0.01;
+                if (alpha >  Math.PI*2) {
+                    alpha -=  Math.PI*2;
+                }
+                
+                cube.position.set( 5*Math.cos(alpha),0, 5*Math.sin(alpha));
+                
+                renderer.render(scene, camera);
+                
+                requestAnimationFrame(draw);
+            }
+```
 ```
 	renderer.setClearColor( 0x002451 );//设置渲染器的bgcolor
 	renderer.setPixelRatio( window.devicePixelRatio );
