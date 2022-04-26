@@ -1,3 +1,28 @@
+# 4/26星期二
+- stats.js 主要用于检测动画运行时的帧数
+## threejs绘制图像的过程:
+1. scene = new THREE.Scene();
+2. camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 1000 );
+3. scene.add( camera );
+4. group = new THREE.Group();
+5. scene.add( group );
+6. 6.1 new THREE.ShapeGeometry( shape );//创建形状
+6.2 var mesh = new THREE.Mesh( geometry, new THREE.MeshPhongMaterial( { color: color, side: THREE.DoubleSide } ) );
+6.3 group.add( mesh );
+7. renderer = new THREE.WebGLRenderer( { antialias: true } );
+8. container.appendChild( renderer.domElement );//container是DOM
+9. 调用动画循环渲染
+```
+			function animate() {
+				requestAnimationFrame( animate );
+				render();
+				// stats.update();
+			}
+			function render() {
+				group.rotation.y += ( targetRotation - group.rotation.y ) * 0.05;
+				renderer.render( scene, camera );
+			}
+```
 # 4/25星期一
 ## three.js加载的模型全是黑色
 - 如果调整环境光后还是黑色或其他的纯色，那么将模型的材质里的emssive设置为material.color，如果材质里有纹理，再把emissiveMap设置为material.map
