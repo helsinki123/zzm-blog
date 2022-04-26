@@ -1,4 +1,6 @@
 # 4/26星期二
+## form提交刷新页面
+- 因为早期网页交互模型只能是浏览器提交数据给服务器，服务器做出响应重新返回一个页面，浏览器加载这个页面进行显示。早期前端没有编程式发送网络请求的 API，更没有前端路由管理的概念，所以表单提交跳转页面是广泛接受的方案。
 - GitLab是一个基于Git实现的在线代码仓库软件，你可以用GitLab自己搭建一个类似于GitHub一样的仓库，但是GitLab有完善的管理界面和权限控制，一般用于在企业、学校等内部网络搭建Git私服
 - GitLab CI/CD 是一个内置在GitLab中的工具，用于通过持续方法进行软件开发： Continuous Integration (CI) 持续集成 Continuous Delivery (CD) 持续交付 Continuous Deployment (CD) 持续部署
 ```
