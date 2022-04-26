@@ -1,4 +1,12 @@
 # 4/26星期二
+- 光线追踪
+```
+  			cube = new THREE.Mesh(new THREE.CubeGeometry(1, 1, 1),
+                        new THREE.MeshLambertMaterial({color: 0x00ff00}));
+ 			var light = new THREE.SpotLight(0xffff00, 1, 100, Math.PI / 6, 25);
+                	light.position.set(2, 5, 3);
+			light.target = cube;
+```
 - 将圆的一周表示为 2*PI 的度量单位，称为弧度，弧度代表半径为 1、圆心角为 θ 的圆弧
 - 下面代码可以使物体做圆周运动，半径为5
 ```
