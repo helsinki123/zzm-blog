@@ -1,4 +1,6 @@
 # 4/26星期二
+- GitLab是一个基于Git实现的在线代码仓库软件，你可以用GitLab自己搭建一个类似于GitHub一样的仓库，但是GitLab有完善的管理界面和权限控制，一般用于在企业、学校等内部网络搭建Git私服
+- GitLab CI/CD 是一个内置在GitLab中的工具，用于通过持续方法进行软件开发： Continuous Integration (CI) 持续集成 Continuous Delivery (CD) 持续交付 Continuous Deployment (CD) 持续部署
 ```
 可视化展示的插件/库有哪些，轻量级图表类的有 Echarts/Highcharts,我用的比较多的是 Echarts，相比 Highcharts 来说，echarts 的数据格式更容易处理，文档阅读性更好；重量级图表插件有 D3，处理类似于 jquery，功能强大，自己是小白的时候实际开发过一些内容~，惨不忍睹。空间位置的有二维的和三维的，其中二维的有天地图，高德，百度，谷歌,LeafLet,openlayers，三维的有 cesium,Three JS，其它第三方可视化插件 Antv G2,DataV(阿里的/基于 vue 的两个)，还有很多，知道了这些工具/插件，那么合理的应用到我们的项目场景中又是一大难题，加油吧，小伙子
 那么 cesium 是干嘛的，做 3D 地图的呀，支持很多空间数据格式，在一些可视化展示上面，能够做出很炫酷的数据分析场景
