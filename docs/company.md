@@ -1,5 +1,6 @@
 # 4/26星期二
 - 将圆的一周表示为 2*PI 的度量单位，称为弧度，弧度代表半径为 1、圆心角为 θ 的圆弧
+- 下面代码可以使物体做圆周运动，半径为5
 ```
 requestAnimationFrame(draw);
 		function draw() {
