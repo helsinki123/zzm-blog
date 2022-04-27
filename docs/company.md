@@ -1,5 +1,28 @@
 # 4/27星期三
 
+## 块级作用域ES6{}的理解
+## a=1不会提升，var a=1;会提升，提升到window，即使在{}块级作用域内也会提升到window
+```
+console.log(window.a,a);//undefined  undefined
+{
+  console.log(window.a,a);//undefined  、undefined
+    var a = 10;
+    console.log(window.a,a)//10 10
+}
+console.log(window.a,a);//10 10
+```
+- 块级作用域函数在编译阶段将函数声明提升到全局作用域，并且会在全局声明一个变量，值为undefined。同时，也会被提升到对应的块级作用域顶层。
+- 块级作用域函数只有定义声明函数的那行代码执行过后，才会被映射到全局作用域。
+```
+console.log(window.a,a);//undefined undefined
+{
+  console.log(window.a,a);//undefined function a(){}
+  function a(){};
+  console.log(window.a,a)//function a(){} function a(){}
+}
+console.log(window.a,a);//function a(){} function a(){}
+```
+## for 循环头部的 let i 不只为 for 循环本身声明了一个 i，而是为循环的每一次迭代都重新声明了一个新的 i
 # 4/26星期二
 - ES6 开始我们可以使用工具函数 Number.isNaN(..)来检测NaN；
 - window.isNaN(... )有BUG
