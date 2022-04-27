@@ -1,8 +1,17 @@
+# 4/27星期三
+
 # 4/26星期二
 - ES6 开始我们可以使用工具函数 Number.isNaN(..)来检测NaN；
 - window.isNaN(... )有BUG
 - undefined 是一个内置标识符（除非被重新定义，见前面的介绍），它的值为 undefined
 - typeof b; // "undefined" ->尽管b未声明，typeof也是显示undefined，而不是报错
+```
+if (typeof b === "undefined") { // ReferenceError! 
+ // .. 
+ } 
+ // .. 
+ let b;
+```
 - 然而，通过 typeof 的安全防范机制（阻止报错）来检查 undeclared 变量，有时是个不错的办法
 ## form提交刷新页面
 - 因为早期网页交互模型只能是浏览器提交数据给服务器，服务器做出响应重新返回一个页面，浏览器加载这个页面进行显示。早期前端没有编程式发送网络请求的 API，更没有前端路由管理的概念，所以表单提交跳转页面是广泛接受的方案。
