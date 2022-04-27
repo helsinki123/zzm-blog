@@ -1,5 +1,31 @@
 # 4/27星期三
-
+## 迭代器
+```
+var arr = [1,2,3]; 
+var it = arr[Symbol.iterator](); //it就是迭代器
+it.next(); // { value: 1, done: false } 
+it.next(); // { value: 2, done: false } 
+it.next(); // { value: 3, done: false } 
+it.next(); // { value: undefined, done: true }
+```
+## 生成器:返回一个迭代器，每次next返回yield的值
+```
+	function* foo() {
+            yield 'zzm'
+            return 1
+        }
+        var it = foo();
+       console.log( it.next());// { value: zzm, done: false } 
+       console.log( it.next());// { value: 1, done: false } 
+```
+## for/of循环是专门用于可迭代对象，例如array，string，set，map
+## 对象结构重新命名，妙啊
+```
+ 	var o1 = { a: 1, b: 2, c: 3 },
+            o2 = {};
+        ({ a: o2.x, b: o2.y, c: o2.z } = o1);
+        console.log(o2.x, o2.y, o2.z); // 1 2 3
+```
 ## 块级作用域ES6{}的理解
 ## a=1不会提升，var a=1;会提升，提升到window，即使在{}块级作用域内也会提升到window
 ```
