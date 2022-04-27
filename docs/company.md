@@ -1,5 +1,10 @@
 # 4/27星期三
+## Set的使用场景去重，Set不可以取值
+## js对象无法使用非字符串作为key！important
+## Map->key:value形式的属性集合 Set->存储唯一值，数组形式的集合。他们都是数据结构，都是object类型，都可迭代
+## 传统的模块化:闭包和单例模式IIFE
 ## 迭代器
+
 ```
 var arr = [1,2,3]; 
 var it = arr[Symbol.iterator](); //it就是迭代器
@@ -17,6 +22,25 @@ it.next(); // { value: undefined, done: true }
         var it = foo();
        console.log( it.next());// { value: zzm, done: false } 
        console.log( it.next());// { value: 1, done: false } 
+```
+### 第一次调用next是启动生成器
+```
+function* foo() {
+            var x = yield 1;
+            var y = yield 2;
+            var z = yield 3;
+            console.log(x, y, z);
+        }
+        var it = foo();
+        // 启动生成器
+        console.log(it.next());; // { value: 1, done: false } 
+        // 回答第一个问题
+        it.next("foo"); // { value: 2, done: false } 
+        // 回答第二个问题
+        it.next("bar"); // { value: 3, done: false } 
+        // 回答第三个问题
+        console.log(it.next("baz"));; // "foo" "bar" "baz" 
+ // { value: undefined, done: true }
 ```
 ## for/of循环是专门用于可迭代对象，例如array，string，set，map
 ## 对象结构重新命名，妙啊
