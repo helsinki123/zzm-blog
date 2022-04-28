@@ -1,4 +1,11 @@
 # 4/28星期四
+## 浏览器存储的应用场景
+```
+cookie：短期登陆，例如：token 会过期，需要设置过期时间，过期后重新换取 token
+sessionStorage：敏感账号一次性登录
+localStorage：长期登录
+indexedDB：存储大量结构化数据数据
+```
 - history 模式改变 url 的方式会导致浏览器向服务器发送请求，这不是我们想看到的，我们需要在服务器端做处理，pushState会发送请求到服务器
 - 改变hash不会发送请求到服务器
 ## 对于开发者来说，rel="noreferrer"属性是最简单的一种方法。<a>、<area>和<form>三个标签可以使用这个属性，一旦使用，该元素就不会发送Referer字段。
