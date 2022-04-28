@@ -1,4 +1,39 @@
 # 4/28星期四
+## setTiemout
+```
+setTimeout()的第二个参数只是告诉 JavaScript 引擎在指定的毫秒数过后
+把任务添加到这个队列。如果队列是空的，则会立即执行该代码。如果队列不是空的，则代码必须等待
+前面的任务执行完才能执行。
+```
+## 确定页面视口大小
+```
+let pageWidth = window.innerWidth, 
+ pageHeight = window.innerHeight; 
+if (typeof pageWidth != "number") { 
+ if (document.compatMode == "CSS1Compat"){ 
+ pageWidth = document.documentElement.clientWidth; 
+ pageHeight = document.documentElement.clientHeight; 
+ } else { 
+ pageWidth = document.body.clientWidth; 
+ pageHeight = document.body.clientHeight; 
+ } 
+}
+```
+# !important 
+```
+另外，访问未声明的变量会抛出错误，但是可以在 window 对象上查询是否存在可能未声明的变量。
+比如：
+// 这会导致抛出错误，因为 oldValue 没有声明
+var newValue = oldValue; 
+// 这不会抛出错误，因为这里是属性查询
+// newValue 会被设置为 undefined 
+var newValue = window.oldValue;
+```
+```
+JSON 的迅速流行并不仅仅因为其语法与 JavaScript 类似，很大程度上还因为 JSON 可以直接被解析
+成可用的 JavaScript 对象。与解析为 DOM 文档的 XML 相比，这个优势非常明显
+```
+- json 可以是简单值，对象和数组
 ```
 1var变量提升
 2全局变量？？？？
