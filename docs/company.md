@@ -1,4 +1,16 @@
 # 4/29星期四
+## 在 对象 里面查找属性不会报错，无则返回undefined
+```
+	console.log(window.c);//undefined
+        var c = {
+            name: 'zzm'
+        };
+        console.log(window.c.d);//undefined
+```
+## 使用var在函数内是局部的，在函数外属于window，是全局的，不使用var 在函数内部声明的变量也是window的
+```
+多数语言都支持字面量，而其中最著名的要数 JavaScript，它支持字符串字面量，数字字面量(即2, 8, 10, 16进制数)，布尔值字面量(true, false)，对象字面量({})，数组字面量([])
+```
 ## var变量提升,即使在{}块内，也会提升到外面，在函数里面只会提升到函数头部
 ### 
 ```
