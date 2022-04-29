@@ -1,4 +1,15 @@
 # 4/29星期四
+## 在{}内，函数声明不会提升到外面，只会在{}顶部，函数声明即使在{}内也是会挂在window
+```
+		a();//报错
+	{
+		a();//正常
+        	function a(){
+            		console.log(1);
+        	}
+       }
+        window.a()//正常
+```
 ## 在 对象 里面查找属性不会报错，无则返回undefined
 ```
 	console.log(window.c);//undefined
