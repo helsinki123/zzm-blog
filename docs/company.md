@@ -1,4 +1,24 @@
 # 4/29星期四
+## var变量提升,即使在{}块内，也会提升到外面，在函数里面只会提升到函数头部
+### 
+```
+	console.log('outer:',a);//undefined
+        console.log('outer:',b);
+        console.log('window-outer:',window.a);
+        console.log('window-outer:',window.b);
+        {
+            console.log('inner:',a);
+            var a = 1;
+
+        }
+	
+	<!--->
+	 console.log(a);//报错
+       function foo(){
+        console.log(a);//undefined
+           var a =1;
+       }
+```
 ## console.assert()可以断言
 ## css优先级：就近原则，内联>内部>外部引入
 # 4/28星期四
