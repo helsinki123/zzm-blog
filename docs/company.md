@@ -1,5 +1,15 @@
 # 4/29星期四
+## isPrototypeOf() 方法用于测试一个对象是否存在于另一个对象的原型链上
+## Object.getPrototypeOf() 方法返回指定对象的原型（内部[[Prototype]]属性的值）。
+## instanceof运算符用于检测构造函数的 prototype 属性是否出现在某个实例对象的原型链上
+##  object instanceof constructor
+## instanceof 运算符用来检测 constructor.prototype 是否存在于参数 object 的原型链上。
 ## vue与webpack的区别
+## instanceof与isPrototypeOf的区别
+```
+A.isPrototypeOf(B) 判断的是A对象是否存在于B对象的原型链之中
+A instanceof B  判断的是B.prototype是否存在与A的原型链之中
+```
 ```
 vue官方描述下，vue-cli是：
 基于 webpack 构建，并带有合理的默认配置；
