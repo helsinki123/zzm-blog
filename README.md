@@ -1,5 +1,7 @@
 # zzm-blog
 *** 
+# Xshell连接阿里云服务器[参考链接](https://developer.aliyun.com/article/770146)
+
 # 更新
 [css笔记](https://github.com/helsinki123/zzm-blog/blob/main/docs/css.md)
 
