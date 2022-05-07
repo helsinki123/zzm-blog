@@ -1,4 +1,27 @@
-# 5/6
+# 5/7星期六
+## CSAPP实验环境搭建
+
+1. 下载Docker[参考，到WSL2 linux kernel这一步就可以了](https://zhuanlan.zhihu.com/p/379328928)
+2. 打开cmd 运行如下命令:
+- docker pull centos
+
+- (获取实验文件)[https://www.geek-share.com/detail/2730781891.html] 解压到D:/狂人笔记/csapp/datalab-handout
+- docker container run -it -v D:/狂人笔记/csapp/datalab-handout:/csapp --name=csapp_env ubuntu /bin/bash
+- 在docker桌面客户端运行csapp_env容器
+- cd csapp
+安装c/c++编译环境
+- yum install make automake gcc gcc-c++ kernel-devel
+准备32位嵌入式c库
+- yum install glibc-devel.i686
+- 完成
+- 运行make
+- 运行./btest
+- 修改bits.c
+- 运行./btest
+- 就可以看到实验分数
+
+
+# 5/6星期五
 ## 递归是重复调用函数自身实现循环。迭代是函数内某段代码实现循环，而迭代与普通循环的区别是：循环代码中参与运算的变量同时是保存结果的变量，当前保存的结果作为下一次循环计算的初始值。
 
 递归循环中，遇到满足终止条件的情况时逐层返回来结束。迭代则使用计数器结束循环。
