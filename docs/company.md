@@ -1,4 +1,63 @@
 # 5/7星期六
+## linux 命令
+```
+netstat -lnpt 查看进程
+
+#用rpm查看是否安装了MySQL
+rpm -qa | grep mysql
+#用ps命令查看是否有MySQL进程
+ps -ef | grep mysql
+##########拓展小知识##############
+linux系统基本上分两大类，RedHat系列和Debian系列。
+RedHat系列：有Redhat、Centos、Fedora等。
+Debian系列：有Debian、Ubuntu等 。
+RedHat 系列常见的安装包格式 rpm包,安装rpm包的命令是“rpm -参数”。
+    包管理工具 yum。
+    支持tar包 。
+Debian系列常见的安装包格式 deb包,安装deb包的命令是“dpkg -参数”。
+    包管理工具 apt-get。
+    支持tar包 。
+
+启动 Mysql 服务
+systemctl start mysqld.service
+
+查看 Mysql 运行状态
+service mysqld status
+
+Linux查看进程 
+ps aux
+
+Linux 查看端口占用情况
+lsof -i:端口号
+
+cat /etc/centos-release//查看linux版本
+Alibaba Cloud Linux release 3 (Soaring Falcon) 
+兼容性：兼容CentOS 8、RHEL 8软件生态
+
+#查询服务
+ps -ef|grep mysql
+ps -ef|grep mysqld
+
+查询所有mysql对应的文件夹
+whereis mysql
+find / -name mysql
+
+rm -rf /usr/share/mysql //卸载文件
+rpm -ev //卸载组件
+ 
+chown将指定文件的拥有者改为指定的用户或组
+
+Linux sudo命令以系统管理者的身份执行指令，也就是说，经由 sudo 所执行的指令就好像是 root 亲自执行
+
+```
+## 部署spring boot 命令
+```
+nohup java -jar demo55-0.0.1-SNAPSHOT.jar > SNAPSHOT.log &
+//&确保后台运行 //SNAPSHOT.log指定日志输出
+
+less SNAPSHOT.log
+//启动jar包
+```
 ## CSAPP实验环境搭建
 
 1. 下载Docker[参考，到WSL2 linux kernel这一步就可以了](https://zhuanlan.zhihu.com/p/379328928)
