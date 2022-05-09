@@ -1,5 +1,13 @@
 # 5/9星期一
-## c语言的静态链接和动态链接类似JavaScript里面的import
+```
+V8是google开发的JavaScript引擎, 它是开源的，而且是用C++编写的
+V8编译器将源代码转换成抽象语法树然后再转换成字节码，解释器解析执行字节码，生成本地代码
+
+v8的编译过程和Java的编译过程类似
+JavaScript开发：程序员不用手动编译
+Java：程序员需要手动编译
+```
+## java语言的静态链接和动态链接类似JavaScript里面的import
 ```
 lib 静态链接包
 library是类库,就是一堆.jar文件的集合 。一般情况下都是若干个.class文件能实现一组功能,这时候便可以把这些.class文件打包成.jar文件。比如说当需要使用集合类的时候,咱们需要import java.uitl.*; 对应的就是一个jar包(.jar文件)它里面就是一堆.class文件。
