@@ -1,8 +1,8 @@
 # 5/9星期一
 ## 代码从文本到可执行文件的过程（c语言示例）：
 ```
-预处理阶段，处理 #inlcude <stadI/O.h>， #define MAX 100
-编译阶段：将文本编译成汇编程序，hello.s
+预处理阶段，处理 #inlcude <stadI/O.h>， #define MAX 100//生成.i文件
+编译阶段：将文本编译成汇编程序，hello.s //将.i文件转为.s文件
 汇编阶段：汇编器将上一步的程序翻译成机器指令。hello.o
 链接阶段就：hello 中调用的printf函数，而函数存在一个printf.o 单独的编译完成文件，需要以某种方式合并到hello.o 中。
 ```
