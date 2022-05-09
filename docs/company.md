@@ -1,4 +1,12 @@
 # 5/9星期一
+## linux执行CSAPP的echo客户端和服务器程序
+- 下载csapp.h
+- 下载csapp.c
+- (参考)[https://www.cxyzjd.com/article/gebigye/50240581]
+- 执行gcc -c csapp.c echoclient.c echoserveri.c //将.c编译成.o可执行文件
+-  gcc -o client csapp.o echoclient.o -lpthread //生成客户端
+-  gcc -o server csapp.o echoserveri.o -lpthread //生成服务端
+-  首先启动server：执行./server 80.然后启动client：./client localhost 80
 ## gcc -o factorial main.c factorial.c //将两个从源程序编译成叫factorial的可执行文件 ./factorial 便可以执行
 ## C语言:宏就类似定义变量，是一条命令 #define N 100就是宏定义，N为宏名，100是宏的内容。在预处理阶段，对程序中所有出现的“宏名”，预处理器都会用宏定义中的字符串去代换，这称为“宏替换”或“宏展开”。
 ## C语言中 .c文件写函数逻辑 .h文件写函数声明
