@@ -34,6 +34,17 @@
 -  gcc -o client csapp.o echoclient.o -lpthread //生成客户端
 -  gcc -o server csapp.o echoserveri.o -lpthread //生成服务端 -o只是换了个名字
 -  首先启动server：执行./server 80.然后启动client：./client localhost 80
+```
+.i 为后缀的文件，是已经预处理过的C源代码文件
+
+gcc -E 预处理指令，可以生成.i后缀文件
+
+#define为宏定义命令。
+
+#endif：#if, #ifdef, #ifndef这些条件命令的结束标志。
+
+预处理->处理宏，并展开，消除注释
+```
 ## gcc -o factorial main.c factorial.c //将两个从源程序编译成叫factorial的可执行文件 ./factorial 便可以执行
 ## C语言:宏就类似定义变量，是一条命令 #define N 100就是宏定义，N为宏名，100是宏的内容。在预处理阶段，对程序中所有出现的“宏名”，预处理器都会用宏定义中的字符串去代换，这称为“宏替换”或“宏展开”。
 ## C语言中 .c文件写函数逻辑 .h文件写函数声明
