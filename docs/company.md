@@ -12,12 +12,18 @@ this.$options.data()重置组件data
 
 mixin:
 getData->设置pageNo: 1.pageSize: 10.total.调用request
-loadList->getData
+request在beforeInit设置->this.request = getList;//import { getList } from "@/api/equipment";
+
+loadList->getData(record和equipment这两个页面使用了loadList)
 refresh->initData->getData
 reInit(调用this.$options.data()重置组件data)->this.init
 search->loadList
 ==============================
 #页面内容
+数据获取逻辑(适用于编辑自检报告):
+组件initData->mixin的getData->组件的beforeInit(设置request)同时组件要设置beforeInit覆盖mixin的beforeInit->调用接口获取数据
+检验项目列表保存/维保项目列表/获取检验意见信息都是一样的逻辑
+
 组件路由对应关系:
 record->自检报告列表
 equipment->设备列表
@@ -37,6 +43,9 @@ attachmentTwo:限速器动作速度校验报告
 编辑自检报告:
 4个模块，每次点击下一步都会出发submit事件，然后跳转到下一页，通过active字段控制，填写完毕最后就回到自检报告列表
 
+可以直接保存，自检报告列表也会生成记录
+点击下一步也会保存 
+
 设备列表:
 head展示：sbzcdm字段
 查看详情：跳转到编辑自检报告传参：/:id/:sbpz/:tzsbbh
@@ -44,6 +53,32 @@ head展示：sbzcdm字段
 自检环境：
 tzsbbh(特种设备编号): 1165788873809203202 
 使用单位自编号:5#
+
+检验项目：
+字段："xmdlmc"
+技术资料
+机房及相关设备
+并道及相关设备
+桥箱与对重
+悬挂装置及旋转部件防护
+轿门与层门
+试验
+接地故障保护
+
+维保项目：
+半月维保项目
+季度维保项目
+半年维保项目
+年度维保项目
+
+搜索自检报告列表：
+sbzcdm(设备注册代码): "312044030020170000005"
+sbsydd: "深圳市南山区华侨城街道创业文化园B3西"
+设备列表 搜索设备:
+sydwmc: "深圳市卓越物业管理有限公司"
+
+store里面设置的authToken无效
+要再http请求拦截里面设置Authorization:才可以获取到数据
 
 ```
 # 5/10星期二
