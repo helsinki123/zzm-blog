@@ -1,3 +1,51 @@
+# 5/11星期三
+```
+自检报告项目需要再请求头手动加上Authorization授权认证
+
+设备：代指电梯吧
+=============================
+#代码
+请求:info?t=1652253365942
+首先 sockjs-node 是一个JavaScript库，提供跨浏览器JavaScript的API，创建了一个低延迟、全双工的浏览器和web服务器之间通信通道
+
+this.$options.data()重置组件data
+
+mixin:
+getData->设置pageNo: 1.pageSize: 10.total.调用request
+loadList->getData
+refresh->initData->getData
+reInit(调用this.$options.data()重置组件data)->this.init
+search->loadList
+==============================
+#页面内容
+组件路由对应关系:
+record->自检报告列表
+equipment->设备列表
+recordForm->编辑自检报告
+
+这两个页面项目上未使用:
+appendix1.vue:附表 1 电梯平衡系数测试记录表
+attachmentOne:电梯平衡系数测试记录表
+attachmentTwo:限速器动作速度校验报告
+
+440300:维保项目.检验结果
+441500:自检结论
+
+首页(自检报告列表)
+设备列表有时有数据->编辑自检报告(自检环境，检验项目，维保项目，检验意见)
+
+编辑自检报告:
+4个模块，每次点击下一步都会出发submit事件，然后跳转到下一页，通过active字段控制，填写完毕最后就回到自检报告列表
+
+设备列表:
+head展示：sbzcdm字段
+查看详情：跳转到编辑自检报告传参：/:id/:sbpz/:tzsbbh
+			       /null/3210/1165788873809203202
+自检环境：
+tzsbbh(特种设备编号): 1165788873809203202 
+使用单位自编号:5#
+
+```
 # 5/10星期二
 ##闭包:某个生成数据的操作，这个操作本身还可以同样的操作进行同样操作的组合
 ```
