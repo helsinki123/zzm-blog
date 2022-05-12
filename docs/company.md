@@ -1,3 +1,6 @@
+# 5/12星期四
+## 组件的优先级高于mixin
+## this.$options.data()会重置data的数据 若使用了mixin且组件也有和mixin同样的data属性，则重置组件里面的属性
 # 5/11星期三
 ```
 自检报告项目需要再请求头手动加上Authorization授权认证
