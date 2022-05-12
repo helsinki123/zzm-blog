@@ -1,4 +1,14 @@
 # 5/12星期四
+```
+report-h5系统设置token(请求授权token)的逻辑：在首页的URL截取参数Authorization的value，设置给vuex的authToken
+在请求拦截为每一个请求添加请求头：Authorization:authToken
+
+import {getData} from "@/mixins";默认是导入mixins文件夹下面的index.js
+
+plugins: [persistedState()]vuex state数据持久化
+```
+
+## (vuex-persistedstate vuex数据持久化使用参考)[https://www.yisu.com/zixun/692211.html]
 ## 状态码
 ```
 503 Service Unavailable 是一种HTTP协议的服务器端错误状态代码，它表示服务器尚未处于可以接受请求的状态
