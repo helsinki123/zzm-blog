@@ -1,3 +1,18 @@
+# 5/13星期五
+## userId一般存储在vuex全局共享，再使用vuex-persistedstate插件提供数据持久化
+
+## 接口路径设置：
+```
+export const baseURL = process.env.NODE_ENV === "production" ? baseURL_production : baseURL_development
+export const imgBaseUrl = process.env.NODE_ENV === "production" ? imgBaseUrl_production : imgBaseUrl_development
+
+const http = new axios.create({
+    baseURL,
+    timeout: 60000,
+    headers: { 'grayuserid': '77', "Content-Type": "application/json;charset=UTF-8",
+}
+})
+```
 # 5/12星期四
 ```
 report-h5系统设置token(请求授权token)的逻辑：在首页的URL截取参数Authorization的value，设置给vuex的authToken
