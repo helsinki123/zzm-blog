@@ -1,4 +1,18 @@
 # 5/13星期五
+## vue全局注册组件格式
+```
+index.js
+import Card from './card';
+const globalComponents = {
+    install: function(Vue) {
+        Vue.component("be-card", Card)
+    }
+}
+export default globalComponents
+main.js
+import globalComponents from '@/components/index.js';
+Vue.use(globalComponents)
+```
 ## userId一般存储在vuex全局共享，再使用vuex-persistedstate插件提供数据持久化
 
 ## 接口路径设置：
