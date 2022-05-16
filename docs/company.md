@@ -1,3 +1,18 @@
+# 5/16 星期六
+```
+new mapv.baiduMapLayer 用来创建图层和圆圈覆盖物
+
+坪山水厂可视化大屏使用的是mapv地理信息可视化开源库与bmap有所不同
+
+new mapv.DataSet// 格式化为mapv的数据格式
+
+502 这个错误是由于服务器压力过大，不能及时处理client的请求导致服务器响应超时而抛出的错误。
+
+wepack代理是在config下面的index.js里面
+
+报错：未结局BMapLib.AreaRestriction.setBounds(map, boundply.getBounds());
+
+```
 # 5/13星期五
 ## vue全局注册组件格式
 ```
