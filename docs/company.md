@@ -1,4 +1,16 @@
 # 5/17 星期二
+```
+
+{
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 150000,
+          name: utils.assetsPath('img/[name].[hash:7].[ext]')
+        }
+      }
+//如果小于10KB的图片转为base64，大于10KB的图片已经将图片路径改为了static/img/'图片名'
+```
 ## 问题
 ```
 使用@指向src目录的点。
