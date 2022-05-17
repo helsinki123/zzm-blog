@@ -1,4 +1,18 @@
-# 5/16 星期六
+# 5/17 星期二
+## 问题
+```
+使用@指向src目录的点。
+
+使用~指向项目根目录的点
+
+~@
+为什么变成"data:image/png;base64,iVBORw0K...YII="
+
+background-image: url("../../static/ps.png");//这样可以？
+
+
+
+# 5/16 星期一
 ```
 new mapv.baiduMapLayer 用来创建图层和圆圈覆盖物
 
