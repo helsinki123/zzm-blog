@@ -33,6 +33,7 @@ element-plus的写法->v-model="dialogVisible"  //在vue3中才有效
 为什么变成"data:image/png;base64,iVBORw0K...YII="
 
 background-image: url("../../static/ps.png");//这样可以？
+```
 
 
 
