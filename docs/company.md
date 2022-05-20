@@ -1,3 +1,13 @@
+# 5/20 星期五
+## elmentui不显示问题
+```
+若项目升级为vue3，则要使用elementUI-Plus的官方写法，不然不会生效
+比如el-dialog
+element2的写法->:visible.sync="dialogVisible" //在vue3中无效
+element-plus的写法->v-model="dialogVisible"  //在vue3中才有效
+怪不得vue3都是搭配elementPlus
+
+```
 # 5/18 星期三
 ## 背景图片404问题 [参考](https://segmentfault.com/a/1190000019495695)
 # 5/17 星期二
