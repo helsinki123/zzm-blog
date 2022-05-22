@@ -1,6 +1,7 @@
 # 5/22 星期天
 ## 问题:在使用Webpack打包本地img图片文件时 图片加载失败 [object Module] 404 (Not Found)
 [可以试试这个](https://blog.csdn.net/Piconjo/article/details/105855172)
+[这个虽然不理解，但是也可以试试](https://icode.best/i/21744734463103)
 ## webpack打包图片问题
 [参考](https://www.jianshu.com/p/4bd5091e317f)
 # 5/20 星期五
