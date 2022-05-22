@@ -1,3 +1,6 @@
+# 5/22 星期天
+## webpack打包图片问题
+[参考](https://www.jianshu.com/p/4bd5091e317f)
 # 5/20 星期五
 ## elmentui不显示问题
 ```
