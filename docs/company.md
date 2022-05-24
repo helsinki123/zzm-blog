@@ -1,3 +1,5 @@
+# 5/24 星期二
+## （Webpack打包后未删除Source Map文件），就会导致vue源码泄露 比如webpack的config里面的api.config.js文件源码暴露（里面有线上地址）
 # 5/22 星期天
 ## 问题:在使用Webpack打包本地img图片文件时 图片加载失败 [object Module] 404 (Not Found)
 [可以试试这个](https://blog.csdn.net/Piconjo/article/details/105855172)
