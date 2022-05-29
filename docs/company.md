@@ -1,3 +1,34 @@
+# 5/29 星期天
+## .gitignore的写法
+```
+.DS_Store
+node_modules
+/dist
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+*.zip
+*.rar
+*.7z
+
+/src/utils/baseUrl.js
+```
 # 5/24 星期二
 ## vue 导出elementUI Excel[ 参考链接](https://segmentfault.com/a/1190000038344526)
 
