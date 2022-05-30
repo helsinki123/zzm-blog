@@ -393,7 +393,7 @@ less SNAPSHOT.log
 
 1. 下载Docker[参考，到WSL2 linux kernel这一步就可以了](https://zhuanlan.zhihu.com/p/379328928)
 2. 打开cmd 运行如下命令:
-- docker pull centos
+- docker pull ubuntu //在docker安装ubuntu镜像 ubuntu使用apt安装软件 ，搜一下就知道如何使用
 
 - (获取实验文件)[https://www.geek-share.com/detail/2730781891.html] 解压到D:/狂人笔记/csapp/datalab-handout
 - docker container run -it -v D:/狂人笔记/csapp/datalab-handout:/csapp --name=csapp_env ubuntu /bin/bash
