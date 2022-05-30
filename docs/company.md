@@ -396,7 +396,7 @@ less SNAPSHOT.log
 - docker pull centos
 
 - (获取实验文件)[https://www.geek-share.com/detail/2730781891.html] 解压到D:/狂人笔记/csapp/datalab-handout
-- docker container run -it -v D:/狂人笔记/csapp/datalab-handout:/csapp --name=csapp_env ubuntu /bin/bash
+- docker container run -it -v D:/狂人笔记/csapp/datalab-handout:/csapp --name=csapp_env centos /bin/bash
 - 在docker桌面客户端运行csapp_env容器
 - cd csapp
 安装c/c++编译环境
