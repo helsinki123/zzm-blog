@@ -1,3 +1,14 @@
+# 5/30 星期一
+## docker可以安装linux 可配置gcc环境
+```
+启动容器
+docker container run -it -v D:/狂人笔记/csapp/datalab-handout:/csapp --name=csapp_env ubuntu /bin/bash //可启动c环境执行界面
+cd csapp
+gcc hello.c -o test //生成可执行文件
+./test //执行
+
+可以在docker利用脚手架启动执行界面
+```
 # 5/29 星期天
 ## .gitignore的写法
 ```
