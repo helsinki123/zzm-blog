@@ -3,6 +3,7 @@
 ```
 启动容器
 docker container run -it -v D:/狂人笔记/csapp/datalab-handout:/csapp --name=csapp_env ubuntu /bin/bash //可启动c环境执行界面
+:/csapp //重命名一个文件夹
 cd csapp
 gcc hello.c -o test //生成可执行文件
 ./test //执行
