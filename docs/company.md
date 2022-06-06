@@ -1,3 +1,13 @@
+# 6/6 星期一 
+```
+docker container run -it -v D:/狂人笔记/csapp/datalab-handout:/csapp --name=csapp_env ubuntu /bin/bash
+cd csapp
+cs csapp
+apt-get update
+apt-get install gcc
+gcc ... -o 重命名
+./重命名
+```
 # 5/30 星期一
 ## docker可以安装linux 可配置gcc环境
 ```
