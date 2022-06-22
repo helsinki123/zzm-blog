@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        video {
+            min-width: 100%;
+            min-height: 100%;
+            height: auto;
+            width: auto;
+            /**
+            filter: blur(15px); //背景模糊设置
+            -webkit-filter: grayscale(100%);
+            filter:grayscale(100%); //背景灰度设置
+            加滤镜*/
+            /* filter: blur(15px);  */
+            /* -webkit-filter: grayscale(100%); */
+            filter:grayscale(100%);
+        }
+        source {
+            min-width: 100%;
+            min-height: 100%;
+            height: auto;
+            width: auto;
+        }
+        #box_wrap {
+            height: 100vh;
+            width: 100vw;
+            overflow: auto;
+            /* 设置自动吸附 */
+            scroll-snap-type: y mandatory; 
+        }
+        .container {
+            height: 100%;
+        }
+        .myvideo{
+            position: relative;
+        }
+        .myvideo > h1{
+            z-index: 1;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+        }
+        .myvideo,
+        .a-img1,
+        .a-img2,
+        .a-img3,
+        .text1 {
+            height: 100vh;
+            background: rgba(0, 0, 0, .7);
+            color: #fff;
+            /* line-height: 100vh; */
+            text-align: center;
+            /* 设置自动吸附 */
+            scroll-snap-align: start;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center center;
+            overflow: hidden;
+        }
+        .a-img1 {
+            background-image: url('https://images.pexels.com/photos/1097491/pexels-photo-1097491.jpeg');
+        }
+        .a-img2 {
+            background-image: url('https://images.pexels.com/photos/2437299/pexels-photo-2437299.jpeg');
+        }
+        .a-img3 {
+            background-image: url('https://images.pexels.com/photos/1005417/pexels-photo-1005417.jpeg');
+        }
+    </style>
+</head>
+
+<body>
+    <main id="box_wrap">
+        <div class="container">
+            <div class="myvideo">
+                <h1>zzm</h1>
+                <video id="v1" autoplay loop muted>
+                    <source src="./陈奕迅 - 最佳损友.mp4" type="video/mp4" />
+                </video>
+            </div>
+            <div class="a-img1"><h1>testTitle testTitle testTitle</h1></div>
+            <div class="a-img2"></div>
+            <div class="text1">text1</div>
+            <div class="a-img3"></div>
+        </div>
+
+    </main>
+</body>
+
+
+</html>
