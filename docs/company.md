@@ -1,3 +1,12 @@
+# 6/23 星期四
+## [性能优化](https://juejin.cn/post/6981673766178783262#heading-13)
+```
+cdn服务器加速：
+如何部署？是前端使用插件上传静态资源到服务器还是类似linux部署前端项目，将静态资源手动添加到cdn服务器的目录？
+
+gzip只压缩静态文件
+只要客户端支持gzip服务，则在nginx配置开启gzip，就可开启gzip服务。
+```
 # 6/6 星期一 
 ```
 docker container run -it -v D:/狂人笔记/csapp/datalab-handout:/csapp --name=csapp_env ubuntu /bin/bash
