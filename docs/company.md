@@ -1,3 +1,10 @@
+# 6/24 星期五
+## git版本回退方案
+- 首先从master创建一个分支（为了保存所有的提交版本）
+- git reset --hard commitId
+- git pull
+- git checkout 新分支
+- git push -f (一定要加-f)
 # 6/23 星期四
 ## [性能优化](https://juejin.cn/post/6981673766178783262#heading-13)
 ```
