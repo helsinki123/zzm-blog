@@ -880,10 +880,10 @@ stats.js 介绍
 ## browse the repository at this point of history 在这个历史时刻浏览存储库 不会覆盖现在的记录，只是浏览过去某个时刻的状态
 ## 拿到一个项目若报sass安装错误，将原来的node-sass和sass-loader uninstall 再安装相应的node-sass和sass-loader,还要注意安装node-sass有node版本的要求
 ```
-sass-loader 4.1.1，node-sass 4.3.0
-sass-loader 7.0.3，node-sass 4.7.2
-sass-loader 7.3.1，node-sass 4.7.2
-sass-loader 7.3.1，node-sass 4.14.1
+sass-loader@4.1.1，node-sass@4.3.0
+sass-loader@7.0.3，node-sass@4.7.2
+sass-loader@7.3.1，node-sass@4.7.2
+sass-loader@7.3.1，node-sass@4.14.1
 ```
 ## 查看vue脚手架版本 vue -V 报错不是有效命令
 - 若装了nvm 则配置系统环境 path 为vue.cmd的路径，比如：G:\nvm\nvm\v10.15.2
