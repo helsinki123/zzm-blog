@@ -1,3 +1,5 @@
+# 7/16 星期六
+[涨知识了 127.0.0.1和 0.0.0.0以及localhost 公网和私网](https://blog.csdn.net/weixin_43606861/article/details/112950603?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-0.no_search_link&spm=1001.2101.3001.4242)
 # 6/24 星期五
 ## git版本回退方案
 - 首先从master创建一个分支（为了保存所有的提交版本）
