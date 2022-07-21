@@ -1,3 +1,24 @@
+# 7/21 星期四
+```
+//    原生判断滑动到屏幕底部
+handleScroll(){	//下面这部分兼容手机端和PC端
+			var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+			var windowHeitht = document.documentElement.clientHeight || document.body.clientHeight;
+			var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+			//是否滚动到底部的判断
+      debugger
+			if(Math.floor(scrollTop) + windowHeitht == scrollHeight){
+        alert("到底了")
+				if(this.pageno <= this.totalnum){
+					// $("#address_manager_alert").show();
+          alert('到底了')
+					this.getSpecialData();
+				}else{
+					return;
+				}
+			}
+		},
+```
 # 7/16 星期六
 1、本地ip和127.0.0.1都是ip地址, 只是127.0.0.1比较特殊, 发送到127.0.0.1的数据或者从127.0.0.1返回的数据只会在本机进行传输, 而不进行外部网络传输;
 2、127.0.0.1主要有以下两个作用：
