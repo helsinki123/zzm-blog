@@ -1,3 +1,6 @@
+# 8/5 星期五
+- [前端导出的三种方式](https://juejin.cn/post/7075605361725538318)
+- [$attr父组件向孙子组件传值](https://blog.csdn.net/QQ_Empire/article/details/121353492)
 # 7/21 星期四
 ```
 //    原生判断滑动到屏幕底部
