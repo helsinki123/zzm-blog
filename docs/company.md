@@ -695,7 +695,7 @@ function* foo() {
         console.log(o2.x, o2.y, o2.z); // 1 2 3
 ```
 ## 块级作用域ES6{}的理解
-## a=1不会提升，var a=1;会提升，提升到window，即使在{}块级作用域内也会提升到window
+## var a=1;会提升，提升到window，即使在{}块级作用域内也会提升到window
 ```
 console.log(window.a,a);//undefined  undefined
 {
