@@ -1,4 +1,5 @@
 # 2023-2-9
+@current-change="handleCurrentChange" 不生效 将handleCurrentChange换成其他名字就可以 难道是UI内部使用了handleCurrentChange？？？？？
 ## Table封装
 ```
 <template>
