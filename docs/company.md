@@ -1,3 +1,74 @@
+# 2023-2-9
+## rem适配windows和mac
+- 1.安装postcss-px2rem插件 npm install postcss-px2rem -S
+- 2.rem.js
+```
+// 基准大小
+const baseSize = 16
+let clientWidth = document.documentElement.clientWidth
+// 设置 rem 函数
+function setRem() {
+    // 当前页面宽度相对于 750 宽的缩放比例，可根据自己需要修改。
+    if(getSystem()){
+        //alert(screen.availWidth)
+
+        //const scale = document.documentElement.clientWidth / screen.availWidth
+        const scale = document.documentElement.clientWidth / 1920
+        // 设置页面根节点字体大小
+        document.documentElement.style.fontSize = baseSize * Math.min(scale, 2) + 'px'
+    }else {
+        const scale = document.documentElement.clientWidth / 1500
+        //document.documentElement.style.fontSize = '14px'
+        document.documentElement.style.fontSize = baseSize * Math.min(scale, 2) + 'px'
+    }
+}
+function getSystem() {
+    let agent = navigator.userAgent.toLowerCase();
+    let isMac = /macintosh|mac os x/i.test(navigator.userAgent);
+    if(isMac) {
+        return false;
+    }
+    //现只针对windows处理，其它系统暂无该情况，如有，继续在此添加
+    if (agent.indexOf("windows") >= 0) {
+        return true;
+    }
+}
+// 初始化
+setRem()
+// 改变窗口大小时重新设置 rem
+window.onresize = function() {
+    setRem()
+}
+```
+
+- 3.main.js
+```
+import './config/rem'
+```
+
+- 4.vue.config.js
+```
+const px2rem = require('postcss-px2rem')
+
+const postcss = px2rem({
+    remUnit: 16   //基准大小 baseSize，需要和rem.js中相同
+})
+
+module.exports = {
+    css: {
+        loaderOptions: {
+            postcss: {
+                plugins: [
+                    postcss
+                ]
+            }
+        }
+    }
+}
+```
+
+
+
 # 8/5 星期五
 - [前端导出的三种方式](https://juejin.cn/post/7075605361725538318)
 - [$attr父组件向孙子组件传值](https://blog.csdn.net/QQ_Empire/article/details/121353492)
