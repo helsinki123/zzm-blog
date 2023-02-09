@@ -1,4 +1,210 @@
 # 2023-2-9
+## Table封装
+```
+<template>
+  <div id="app">
+    <!-- <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <Table :table-columns="columns" 
+    :table-data="tableData" 
+    :pages="{ query, total }" 
+    :loading="false">
+      <template slot="extraHandleButtons">
+        <div @click="handleClick">详情</div>
+      </template>
+    </Table>
+  </div>
+</template>
+
+<script>
+// import HelloWorld from './components/HelloWorld.vue'
+import Table from './components/my-table/index.vue'
+
+export default {
+  name: 'App',
+  components: {
+    // HelloWorld,
+    Table
+  },
+  data() {
+    return {
+      columns: [
+        { label: "状态", prop: "status", width: 100,formatter: (row) => {
+            return ['签到', '提交', '完成'][row.status]
+          } },
+        { label: "设备注册代码", prop: "sbzcdm", minWidth: 'auto' },
+        { label: "使用单位", prop: "sydwmc", minWidth: 'auto' },
+        { label: "维保单位", prop: "wbdwmc", minWidth: 'auto' },
+        { label: "设备使用地点", prop: "sbsydd", minWidth: 'auto' },
+        { label: "单位内部编号", prop: "dwnbbh", minWidth: 'auto' },
+        { label: "项目名称", prop: "projectName", width: 100 }
+      ],
+      tableData: [
+        {
+          status:2,
+          sbzcdm: '2016-05-03',
+          sydwmc: '王小虎',
+          
+        },
+        {
+          status:2,
+          sbzcdm: '2016-05-03',
+          sydwmc: '王小虎',
+          
+        },
+        {
+          status:2,
+          sbzcdm: '2016-05-03',
+          sydwmc: '王小虎',
+          
+        },
+        {
+          status:2,
+          sbzcdm: '2016-05-03',
+          sydwmc: '王小虎',
+          
+        },
+        {
+          status:2,
+          sbzcdm: '2016-05-03',
+          sydwmc: '王小虎',
+          
+        },
+        {
+          status:2,
+          sbzcdm: '2016-05-03',
+          sydwmc: '王小虎',
+          
+        },
+        {
+          status:2,
+          sbzcdm: '2016-05-03',
+          sydwmc: '王小虎',
+          
+        },
+      ],
+      query:{},
+      total:100,
+
+    }
+
+  },
+  methods:{
+    handleClick(){
+      console.log("aaa");
+    }
+  }
+}
+</script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
+
+```
+## 使用
+```
+<template>
+    <div class="table">
+        <div class="table-main">
+            <el-table ref="table"
+        :data="tableData"
+        v-loading="loading"
+        >
+            <!-- 表格项 -->
+            <template v-for="(item,index) in tableColumns">
+                <el-table-column 
+                v-bind="item"
+                :key="index"
+                >
+                    <template slot-scope="scope">
+                        <slot>
+                            <template v-if="item.formatter">
+                                <span v-html="item.formatter(scope.row)" />
+                            </template>
+                            <template v-else>
+                               <span>{{scope.row[item.prop]}}</span> 
+                            </template>
+                        </slot>
+                    </template>
+                </el-table-column>
+            </template>
+            <!-- 操作 -->
+            <template>
+                <el-table-column>
+                    <div>
+                        <slot
+                        name="extraHandleButtons"
+                        ></slot>
+                    </div>
+                </el-table-column>
+            </template>
+
+        </el-table>
+        </div>
+
+        <div class="table-pagination">
+        <el-pagination
+      @size-change="handleSizeChange"
+      @current-change="handleCurrentChange"
+      :current-page="currentPage4"
+      :page-sizes="[100, 200, 300, 400]"
+      :page-size="100"
+      layout="total, sizes, prev, pager, next, jumper"
+      :total="400">
+         </el-pagination>
+    </div>
+    </div>
+
+    
+</template>
+
+<script>
+export default {
+    components: {},
+    name: '',
+    props: {
+        tableColumns: {
+            type: Array,
+            default() {
+                return []
+            }
+        },
+        tableData: {
+            type: Array,
+            default() {
+                return []
+            }
+        },
+        pages: Object,
+
+        
+      loading: {
+            type: Boolean,
+            default: false
+        },
+    },
+    data() {
+        return {
+        };
+    },
+    watch: {},
+    computed: {},
+    methods: {},
+    created() { },
+    mounted() { }
+};
+</script>
+<style lang="sass" scoped>
+</style>
+```
 ## rem适配windows和mac
 - 1.安装postcss-px2rem插件 npm install postcss-px2rem -S
 - 2.rem.js
