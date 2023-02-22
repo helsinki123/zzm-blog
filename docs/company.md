@@ -1,3 +1,80 @@
+# 使用和风天气API
+```
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<!-- <script src="js/vue.js" type="text/javascript" charset="utf-8"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<form>
+				<input type="text" v-model="city">
+				<button @click.prevent="searchWeather">提交</button>
+			</form>
+			<div id="weather">
+				<h1>新API</h1>
+				<h2>{{tmpNew}}</h2>
+				<h3>{{briefNew}}</h3>
+			</div>
+			<div id="weather">
+				<h1>老API</h1>
+				<h2>{{tmpOld}}</h2>
+				<h3>{{briefOld}}</h3>
+			</div>
+		</div>
+	</body>
+	<script>
+		var app = new Vue({
+			el:"#app",
+			data:{
+				city:"广州",
+				tmpNew:"",
+				briefNew:"",
+				tmpOld:"",
+				briefOld:"",
+				
+			},
+			methods:{
+				searchWeather:async function(){//注意：这里有 async 用来完成异步操作
+					//由于调用api是异步操作
+					//在请求的时候需要用async+await让它同步，否则数据不好取出
+					//如果没有await返回的是一个Promise 对象，我学术短浅，暂时没学到，不会取
+
+					let key = "c457fdf4661a4f0ab81dbb3cd68b900a"//引号中放入前面保存的key
+
+					//方法一：老的API
+					//老的api
+					//这里的引号是tab键上面的引号，主要作用是方便数据拼接
+					let httpUrlOld=`https://free-api.heweather.net/s6/weather/now?location=${this.city}&key=${key}`
+					let resOld = await fetch(httpUrlOld)//请求数据
+					let resultOld = await resOld.json()//将请求的数据转换为json数据类型
+					let nowOld = resultOld.HeWeather6[0].now//获取到json数据中的实况天气
+					console.log(nowOld)
+					this.tmpOld = nowOld.tmp;//获取到当前温度
+					this.briefOld = nowOld.cond_txt;//获取到当前天气
+
+					//方法二：新的API
+					//获取城市的ID
+					let httpUrl = `https://geoapi.qweather.com/v2/city/lookup?location=${this.city}&key=${key}`
+					let res = await fetch(httpUrl)
+					let result = await res.json()
+					let id = result.location[0].id
+					//根据城市id获取具体的天气
+					let httpUrl1 = `https://devapi.qweather.com/v7/weather/now?location=${id}&key=${key}`
+					let res1 = await fetch(httpUrl1)
+					let result1 = await res1.json()
+					let now = result1.now
+					this.tmpNew =now.temp
+					this.briefNew = now.text
+				}
+			}
+		})
+	</script>
+</html>
+```
 # 2023-2-9
 @current-change="handleCurrentChange" 不生效 将handleCurrentChange换成其他名字就可以 难道是UI内部使用了handleCurrentChange？？？？？
 ## Table封装
